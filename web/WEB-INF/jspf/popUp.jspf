@@ -1,0 +1,146 @@
+<script>
+    $(document).ready(function () {
+        $('.toast').toast('show');
+    });
+</script>
+<c:choose>
+    <c:when test="${param.info=='mail'}">
+
+        <%--&lt;%&ndash;<div class="bs-example">
+            <div class="toast" id="myToast1" data-autohide="false"
+                 style="position: absolute; top: 30px; right: 15px;">
+                <div class="toast-header">
+                    <strong class="mr-auto"><i class="fa fa-grav"></i><fmt:message bundle="${message}"
+                                                                                   key="modal.confirmation"/></strong>
+                    <small></small>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="toast-body">
+                    <div><label class="text-dark"><fmt:message bundle="${message}" key="popup.success8"/></label></div>
+                </div>
+            </div>
+        </div>
+    </c:when>
+    <c:when test="${not empty param.success}">
+        <div class="bs-example">
+            <div class="toast" id="myToast2" data-autohide="false"
+                 style="position: absolute; top: 30px; right: 15px;">
+                <div class="toast-header">
+                    <strong class="mr-auto"><i class="fa fa-grav"></i><fmt:message bundle="${message}"
+                                                                                   key="modal.success"/></strong>
+                    <small></small>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="toast-body">
+                    <div>
+                        <label class="text-dark">
+                            <c:if test="${param.success==1}">
+                                <fmt:message bundle="${message}"
+                                             key="popup.success1"/>
+                            </c:if>
+                            <c:if test="${param.success==2}">
+                                <fmt:message bundle="${message}"
+                                             key="popup.success2"/>
+                            </c:if>
+                            <c:if test="${param.success==3}">
+                                <fmt:message bundle="${message}"
+                                             key="popup.success3"/>
+                            </c:if>
+                            <c:if test="${param.success==6}">
+                                <fmt:message bundle="${message}"
+                                             key="popup.success6"/>
+                            </c:if>
+                            <c:if test="${param.success==8}">
+                                <fmt:message bundle="${message}" key="popup.success8"/>
+                            </c:if>
+                            <c:if test="${param.success==9}">
+                                <fmt:message bundle="${message}"
+                                             key="popup.success9"/>
+                            </c:if>
+
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>--%>
+    </c:when>
+
+    <c:when test="${not empty param.amount}">
+
+        <script>
+            $(document).ready(function () {
+                $('.toast').toast('show');
+            });
+        </script>
+        <div class="bs-example">
+            <div class="toast" id="myToast" data-autohide="false" style="position: absolute; top: 30px; right: 15px;">
+                <div class="toast-header">
+                    <strong class="mr-auto"><i class="fa fa-grav"></i><fmt:message bundle="${message}"
+                                                                                   key="modal.success"/></strong>
+                    <small></small>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="toast-body">
+                    <div>
+                        <fmt:message bundle="${message}"
+                                     key="popup.amount"/> ${param.amount}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </c:when>
+
+    <c:when test="${not empty param.error}">
+        <script>
+            $(document).ready(function () {
+                $('.toast').toast('show');
+            });
+        </script>
+        <div class="bs-example">
+            <div class="toast" id="myToast4" data-autohide="false"
+                 style="position: absolute; top: 30px; right: 15px;">
+                <div class="toast-header">
+                    <strong class="mr-auto"><i class="fa fa-grav"></i><fmt:message bundle="${message}"
+                                                                                   key="popup.error"/></strong>
+                    <small></small>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="toast-body">
+                    <div>${param.error}</div>
+                </div>
+            </div>
+        </div>
+    </c:when>
+    <c:when test="${not empty param.cvv}">
+        <script>
+            $(document).ready(function () {
+                $('.toast').toast('show');
+            });
+        </script>
+        <div class="bs-example">
+            <div class="toast" id="myToast3" data-autohide="false"
+                 style="position: absolute; top: 30px; right: 15px;">
+                <div class="toast-header">
+                    <strong class="mr-auto"><i class="fa fa-grav"></i><fmt:message bundle="${message}"
+                                                                                   key="popup.your_cvv"/></strong>
+                    <small></small>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="toast-body">
+                    <div><fmt:message bundle="${message}"
+                                      key="popup.your_code"/> ${param.cvv}</div>
+                </div>
+            </div>
+        </div>
+    </c:when>
+</c:choose>

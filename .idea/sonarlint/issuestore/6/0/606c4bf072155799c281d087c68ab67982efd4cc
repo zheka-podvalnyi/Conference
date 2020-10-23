@@ -1,0 +1,14 @@
+
+L
+java:S3740v"/Provide the parametrized type for this generic.(ÉÉ²ø8õ÷¬¡Ô.
+R
+java:S3740…"/Provide the parametrized type for this generic.(…ûé§ÿÿÿÿÿ8Ã¼Í¡Ô.
+m	java:S117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆÑĞà8Â«æâÒ.
+L
+java:S3740"/Provide the parametrized type for this generic.(íÛÊŸ8Â«æâÒ.
+n	java:S117”"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£âä©8ˆí“Ô.
+n	java:S117”"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£âä©8ˆí“Ô.
+_
+java:S1128"=Remove this unused import 'ua.nure.podvalnyi.db.entity.User'.(¬¾òøÿÿÿÿ8Â«æâÒ.
+k
+java:S1192"ODefine a constant instead of duplicating this literal "SELECT * FROM " 3 times.(ß™â8Â«æâÒ.

@@ -1,0 +1,10 @@
+
+X
+java:S1128";Remove this unused import 'javax.servlet.http.HttpSession'.(í¨ô8ÂéåâÒ.
+_
+java:S1128"=Remove this unused import 'ua.nure.podvalnyi.db.entity.User'.(¬¾òøÿÿÿÿ8ÂéåâÒ.
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ÂéåâÒ.
+o
+java:S1128"RRemove this unused import 'ua.nure.podvalnyi.db.entity.containers.EventContainer'.(±ĞÍÖ8ÂéåâÒ.
+]	java:S125+"<This block of commented-out lines of code should be removed.(®Çé®şÿÿÿÿ8É³Ø¡Ô.

@@ -1,0 +1,20 @@
+<div class="dropdown open">
+    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+        <fmt:message bundle="${message}" key="global.language"/>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <button type="submit" form="changeLanguageRu" class="dropdown-item">Russian</button>
+        <button type="submit" form="changeLanguageEn" class="dropdown-item">English</button>
+    </div>
+</div>
+<form id="changeLanguageRu" action="${pageContext.request.contextPath}/controller1" method="post">
+    <input type="hidden" name="command" value="changeLanguage">
+    <input type="hidden" name="lang" value="ru">
+
+</form>
+<form id="changeLanguageEn" action="${pageContext.request.contextPath}/controller1" method="post">
+    <input type="hidden" name="command" value="changeLanguage">
+    <input type="hidden" name="lang" value="en">
+
+</form>

@@ -1,0 +1,10 @@
+
+]
+java:S1854"@Remove this useless assignment to local variable "eventService".(‹¹ÿÙ8ıêÇÃÒ.
+N
+java:S1481"1Remove this unused "eventService" local variable.(‹¹ÿÙ8ıêÇÃÒ.
+]
+java:S1854";Remove this useless assignment to local variable "session".(ûİÙ¹şÿÿÿÿ8¡ò¿áÒ.
+]	java:S125"<This block of commented-out lines of code should be removed.(§¦Ã«ıÿÿÿÿ8¡ò¿áÒ.
+N
+java:S1481",Remove this unused "session" local variable.(ûİÙ¹şÿÿÿÿ8¡ò¿áÒ.

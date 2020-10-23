@@ -1,0 +1,9 @@
+
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ∫∂Õ8¿Ôçî‘.
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ∫∂Õ8¿Ôçî‘.
+M
+java:S1128"0Remove this unused import 'java.sql.Connection'.(•ÀÙ÷8”Æéî‘.
+O
+java:S1128"2Remove this unused import 'java.sql.SQLException'.(€Ô∆ü8¿Ôçî‘.
+G
+java:S1128"*Remove this unused import 'java.sql.Date'.(Ÿ¿Ω 8™∏‘á‘.

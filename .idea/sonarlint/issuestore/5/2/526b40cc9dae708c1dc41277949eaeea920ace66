@@ -1,0 +1,17 @@
+
+W
+java:S1161":Add the "@Override" annotation above this method signature(°€İá8¨ÀÃöĞ.
+~
+java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(¡‡¾®8¨ÀÃöĞ.
+X	java:S1251"<This block of commented-out lines of code should be removed.(Œ™¾Œ8ÒÌ‚ÿÓ.
+u
+java:S1989"SHandle the following exception that could be thrown by "sendRedirect": IOException.(äæÿúÿÿÿÿ8¨ÀÃöĞ.
+O
+java:S1199:"-Extract this nested code block into a method.(ş‡ª°şÿÿÿÿ8¨ÀÃöĞ.
+m
+java:S1301/"KReplace this "switch" statement by "if" statements to increase readability.(€±Öøÿÿÿÿ8ÒÌ‚ÿÓ.
+C	java:S131/""Add a default case to this switch.(€±Öøÿÿÿÿ8¨ÀÃöĞ.
+\
+java:S1161":Add the "@Override" annotation above this method signature(Ïû©Öûÿÿÿÿ8¨ÀÃöĞ.
+J
+java:S11996"-Extract this nested code block into a method.(èİ€8¨ÀÃöĞ.

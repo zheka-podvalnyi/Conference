@@ -1,0 +1,8 @@
+
+j	java:S116"NRename this field "LOG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊôÆÎ8ÊÀ˜›Ô.
+K
+java:S1481")Remove this unused "user" local variable.(¾˜ îüÿÿÿÿ8©­¬›Ô.
+B
+java:S1948"%Make "LOG" transient or serializable.(ÊôÆÎ8ÊÀ˜›Ô.
+Z
+java:S1854"8Remove this useless assignment to local variable "user".(¾˜ îüÿÿÿÿ8©­¬›Ô.

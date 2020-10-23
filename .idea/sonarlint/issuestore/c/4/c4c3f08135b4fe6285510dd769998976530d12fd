@@ -1,0 +1,10 @@
+
+W
+java:S1118	":Add a private constructor to hide the implicit public one.(ò÷Ñ±8’À¨¨Ï.
+>
+java:S1116"Remove this empty statement.(Åñ­õşÿÿÿÿ8ª—ñ¨Ï.
+”
+java:S5527"wEnable server hostname verification on this SSL/TLS connection, by setting "mail.smtp.ssl.checkserveridentity" to true.( Öˆ8ÀË·¨Ï.
+W
+java:S1161":Add the "@Override" annotation above this method signature(‡èú×8Šï¨Ï.
+Z	java:S106+"9Replace this use of System.out or System.err by a logger.(ï®–íıÿÿÿÿ8›Ø•©Ï.

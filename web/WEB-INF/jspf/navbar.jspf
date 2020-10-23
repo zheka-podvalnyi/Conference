@@ -1,0 +1,76 @@
+<%--<%@ include file="/WEB-INF/jspf/directive/taglib.jspf" %>--%>
+
+<%@ include file="/WEB-INF/jspf/locale.jspf" %>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="pages/main.jsp"> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="${pageContext.request.contextPath}/controller1?command=allEvents">
+                    <label><fmt:message bundle="${message}"
+                                                                                                     key="global.get_list_events"/></label></a>
+            </li>
+
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+
+
+            <a class="nav-link" href="${pageContext.request.contextPath}/pages/profile.jsp">
+                <label><fmt:message bundle="${message}"
+                                    key="global.profile"/></label></a>
+
+        </form>
+    </div>
+
+
+    <div class="dropdown-divider">
+    <form action="${pageContext.request.contextPath}/controller1" method="get">
+        <button type="submit" class="dropdown-item"><fmt:message bundle="${message}"
+                                                                 key="global.logout"/></button>
+        <input type="hidden" name="command" value="logout"/>
+    </form>
+
+        <a class="nav-link dropdown-toggle" id="navbarDropdown2" role="button"
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <fmt:message bundle="${message}" key="userbar.settings"/>
+        </a>
+
+
+
+
+        <a class="nav-link dropdown-toggle" id="dropdownMenuButton" role="button"
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <fmt:message bundle="${message}" key="global.language"/>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <button type="submit" form="changeLanguageRu" class="dropdown-item"><fmt:message bundle="${message}"
+                                                                                             key="global.ru"/></button>
+            <button type="submit" form="changeLanguageEn" class="dropdown-item"><fmt:message bundle="${message}"
+                                                                                             key="global.en"/></button>
+        </div>
+
+    <form id="changeLanguageRu" action="${pageContext.request.contextPath}/controller1" method="post">
+        <input type="hidden" name="command" value="changeLanguage">
+        <input type="hidden" name="lang" value="ru">
+    </form>
+    <form id="changeLanguageEn" action="${pageContext.request.contextPath}/controller1" method="post">
+        <input type="hidden" name="command" value="changeLanguage">
+        <input type="hidden" name="lang" value="en">
+    </form>
+    </div>
+
+
+    <button class="btn-info" type="submit">Send Email</button>
+</nav>
+
+<%--
+<%@ include file="/WEB-INF/jspf/popUp.jspf" %>--%>

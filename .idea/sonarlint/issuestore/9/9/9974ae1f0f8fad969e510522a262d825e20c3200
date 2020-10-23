@@ -1,0 +1,8 @@
+
+A
+java:S1948"%Make "LOG" transient or serializable.(Ô‚·8ñ„ä‘Ô.
+Z
+java:S1854 "8Remove this useless assignment to local variable "user".(¾˜ îüÿÿÿÿ8å½ð‘Ô.
+i	java:S116"NRename this field "LOG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ô‚·8ñ„ä‘Ô.
+K
+java:S1481 ")Remove this unused "user" local variable.(¾˜ îüÿÿÿÿ8å½ð‘Ô.

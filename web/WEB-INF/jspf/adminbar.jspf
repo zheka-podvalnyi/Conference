@@ -1,0 +1,88 @@
+
+<%--<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>--%>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img class="navbar-brand" src="${pageContext.request.contextPath}/pages/resources/img/logo_small.png">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="${pageContext.request.contextPath}/pages/main.jsp"><fmt:message
+                        bundle="${message}"
+                        key="global.profiles"/><span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <fmt:message bundle="${message}"
+                                 key="global.credit_cards"/>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+
+                    <form action="${pageContext.request.contextPath}/controller1" method="get">
+                        <button type="submit" class="dropdown-item"><fmt:message bundle="${message}"
+                                                                                 key="global.get_list_cards"/></button>
+                        <input type="hidden" name="command" value="allCards"/>
+                    </form>
+
+                    <form action="${pageContext.request.contextPath}/controller1" method="get">
+                        <button type="submit" class="dropdown-item"><fmt:message bundle="${message}"
+                                                                                 key="global.get_list_payments"/></button>
+                        <input type="hidden" name="command" value="allEvents"/>
+                    </form>
+
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown2" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <fmt:message bundle="${message}"
+                                 key="global.actions"/>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                    <form action="${pageContext.request.contextPath}/controller1" method="get">
+                        <input type="hidden" name="command" value="createAdmin"/>
+                        <button type="submit" class="dropdown-item"><fmt:message bundle="${message}"
+                                                                                 key="global.create_new_admin"/></button>
+                    </form>
+                    <a class="dropdown-item"
+                       href="${pageContext.request.contextPath}/controller1?command=allReports"><fmt:message
+                            bundle="${message}"
+                            key="global.get_list_reports"/></a>
+                    <div class="dropdown-divider"></div>
+                    <form action="${pageContext.request.contextPath}/controller1" method="get">
+                        <button type="submit" class="dropdown-item"><fmt:message bundle="${message}"
+                                                                                 key="global.logout"/></button>
+                        <input type="hidden" name="command" value="logout"/>
+                    </form>
+                </div>
+            <li class="dropdown nav-item open">
+                <a class="nav-link dropdown-toggle" id="dropdownMenuButton" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <fmt:message bundle="${message}" key="global.language"/>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <button type="submit" form="changeLanguageRu" class="dropdown-item"><fmt:message bundle="${message}"
+                                                                                                     key="global.ru"/></button>
+                    <button type="submit" form="changeLanguageEn" class="dropdown-item"><fmt:message bundle="${message}"
+                                                                                                     key="global.en"/></button>
+                </div>
+            </li>
+            <form id="changeLanguageRu" action="${pageContext.request.contextPath}/controller1" method="post">
+                <input type="hidden" name="command" value="changeLanguage">
+                <input type="hidden" name="lang" value="ru">
+            </form>
+            <form id="changeLanguageEn" action="${pageContext.request.contextPath}/controller1" method="post">
+                <input type="hidden" name="command" value="changeLanguage">
+                <input type="hidden" name="lang" value="en">
+            </form>
+            </li>
+        </ul>
+    </div>
+</nav>
+<%@ include file="/WEB-INF/jspf/popUp.jspf" %>
