@@ -1,9 +1,0 @@
-
-\
-java:S1854":Remove this useless assignment to local variable "events".(Éæ‰ñùÿÿÿÿ8Üáü€Ô.
-]
-java:S1854";Remove this useless assignment to local variable "session".(ûİÙ¹şÿÿÿÿ8Üáü€Ô.
-M
-java:S1481"+Remove this unused "events" local variable.(Éæ‰ñùÿÿÿÿ8Üáü€Ô.
-N
-java:S1481",Remove this unused "session" local variable.(ûİÙ¹şÿÿÿÿ8Üáü€Ô.

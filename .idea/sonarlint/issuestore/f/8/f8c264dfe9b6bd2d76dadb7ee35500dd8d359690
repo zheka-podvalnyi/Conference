@@ -1,31 +1,0 @@
-
-MWeb:BoldAndItalicTagsCheckÆ"!Replace this <b> tag by <strong>.(éêÀ€ÿÿÿÿÿ
-h Web:TableHeaderHasIdOrScopeCheck†";Add either an 'id' or a 'scope' attribute to this <th> tag.(Íâ•ã
-PWeb:PageWithoutTitleCheck	"Add a <title> tag to this page.(œ÷Ãûÿÿÿÿ8¼—Á†Ô.
-h Web:TableHeaderHasIdOrScopeCheck’";Add either an 'id' or a 'scope' attribute to this <th> tag.(Éİ¤ä
-cWeb:DoctypePresenceCheck	":Insert a <!DOCTYPE> declaration to before this <html> tag.(œ÷Ãûÿÿÿÿ
-NWeb:TableWithoutCaptionCheck" Add a description to this table.(Ó÷®Œûÿÿÿÿ
-HWeb:BoldAndItalicTagsCheckÅ"!Replace this <b> tag by <strong>.(¼Ó»€
-h Web:TableHeaderHasIdOrScopeCheckù";Add either an 'id' or a 'scope' attribute to this <th> tag.(Ì‹Õµ
-m Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(°ÅñÒøÿÿÿÿ
-MWeb:TableWithoutCaptionCheck+" Add a description to this table.(Ó÷®Œûÿÿÿÿ
-MWeb:BoldAndItalicTagsCheckË"!Replace this <b> tag by <strong>.(¸Ãÿ«úÿÿÿÿ
-MWeb:BoldAndItalicTagsCheckÈ"!Replace this <b> tag by <strong>.(«£ ıÿÿÿÿ
-HWeb:BoldAndItalicTagsCheckÊ"!Replace this <b> tag by <strong>.(¡Â¥Ñ
-Z	Web:S5254	"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(œ÷Ãûÿÿÿÿ
-IWeb:TableWithoutCaptionCheckò" Add a description to this table.(ä¨–ä
-NWeb:TableWithoutCaptionCheckÍ" Add a description to this table.(Ó÷®Œûÿÿÿÿ
-m Web:TableHeaderHasIdOrScopeCheckı";Add either an 'id' or a 'scope' attribute to this <th> tag.(±†„×øÿÿÿÿ
-HWeb:BoldAndItalicTagsCheck†"!Replace this <b> tag by <strong>.(÷…æ¿
-MWeb:BoldAndItalicTagsCheckÃ"!Replace this <b> tag by <strong>.(Üóúøÿÿÿÿ
-h Web:TableHeaderHasIdOrScopeCheckõ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ı’Æ”
-MWeb:BoldAndItalicTagsCheck"!Replace this <b> tag by <strong>.(Êì¡ªøÿÿÿÿ
-IWeb:BoldAndItalicTagsCheck‹"Replace this <i> tag by <em>.(¦Äø¶ûÿÿÿÿ
-GWeb:BoldAndItalicTagsCheck„"!Replace this <b> tag by <strong>.(†ïf
-HWeb:BoldAndItalicTagsCheck€"!Replace this <b> tag by <strong>.(ô¯İ
-MWeb:BoldAndItalicTagsCheckˆ"!Replace this <b> tag by <strong>.(ÈÎè¼ùÿÿÿÿ
-MWeb:BoldAndItalicTagsCheckÁ"!Replace this <b> tag by <strong>.(İıÿùúÿÿÿÿ
-MWeb:BoldAndItalicTagsCheck¿"!Replace this <b> tag by <strong>.(Â‹¾Íûÿÿÿÿ
-h Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(øáË—
-NWeb:TableWithoutCaptionCheckÓ" Add a description to this table.(Ó÷®Œûÿÿÿÿ
-MWeb:BoldAndItalicTagsCheck‚"!Replace this <b> tag by <strong>.(¸Ãÿ«úÿÿÿÿ

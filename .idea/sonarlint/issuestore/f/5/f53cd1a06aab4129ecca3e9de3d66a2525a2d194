@@ -1,16 +1,0 @@
-
-h
-java:S1301M"KReplace this "switch" statement by "if" statements to increase readability.(ãØ´ú8÷ıÓÏ.
->	java:S131M""Add a default case to this switch.(ãØ´ú8÷ıÓÏ.
-J
-java:S1199U"-Extract this nested code block into a method.(›²Ûê8÷ıÓÏ.
-\
-java:S1118":Add a private constructor to hide the implicit public one.(Óîáéùÿÿÿÿ8÷ıÓÏ.
-t
-java:S1192Q"RDefine a constant instead of duplicating this literal "Command not found" 3 times.(Ú›Ğ»ıÿÿÿÿ8÷ıÓÏ.
-J
-java:S1199N"-Extract this nested code block into a method.(õ×šÜ8÷ıÓÏ.
-v
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(‡’—Ú8ç–¢èÓ.
-v
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¨Æ•Õ8÷ıÓÏ.

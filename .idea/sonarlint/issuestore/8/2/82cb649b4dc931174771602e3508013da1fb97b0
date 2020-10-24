@@ -1,8 +1,0 @@
-
-[
-java:S1128">Remove this unused import 'ua.nure.podvalnyi.db.entity.Event'.(ªãÂ¼8«¿Ê˜Ô.
-B
-java:S1948"%Make "LOG" transient or serializable.(“ƒ˜Ÿ8¯Í¥“Ô.
-j	java:S116"NRename this field "LOG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ƒ˜Ÿ8¯Í¥“Ô.
-h
-java:S1128"FRemove this unused import 'ua.nure.podvalnyi.db.service.EventService'.(ìº÷Šÿÿÿÿÿ8«¿Ê˜Ô.
