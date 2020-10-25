@@ -5,7 +5,7 @@
          version="4.0">
 
     <welcome-file-list>
-        <welcome-file>pages/registration.jsp</welcome-file>
+        <welcome-file>pages/main.jsp</welcome-file>
     </welcome-file-list>
 
     <error-page>

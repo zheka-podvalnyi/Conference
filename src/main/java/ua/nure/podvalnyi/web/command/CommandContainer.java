@@ -3,7 +3,10 @@ package ua.nure.podvalnyi.web.command;
 import org.apache.log4j.Logger;
 import ua.nure.podvalnyi.exception.AppException;
 import ua.nure.podvalnyi.web.command.moderator.*;
+import ua.nure.podvalnyi.web.command.speaker.GetEventByIdCommand;
 import ua.nure.podvalnyi.web.command.speaker.GetMyEventsCommand;
+import ua.nure.podvalnyi.web.command.speaker.JoinToEventAsSpeakerCommand;
+import ua.nure.podvalnyi.web.command.speaker.JoinToEventAsSpeakerFormCommand;
 import ua.nure.podvalnyi.web.command.user.*;
 
 import java.util.Map;
@@ -42,11 +45,11 @@ public class CommandContainer {
          **/
         //user commands
         postCommands.put("addReport", new AddReportCommand());
-
-        getCommands.put("history", new HistoryCommand());
+        postCommands.put("joinToEventAsSpeaker",new JoinToEventAsSpeakerCommand());
         getCommands.put("profile", new ProfileFormCommand());
         getCommands.put("reports", new ReportFormCommand());
         getCommands.put("joinToEvent", new JoinUserToEventCommand());
+        getCommands.put("registerToEventForm", new JoinToEventAsSpeakerFormCommand());
 
 
         /**
@@ -58,15 +61,28 @@ public class CommandContainer {
         getCommands.put("allUsers", new GetAllUsersCommand());
         getCommands.put("getStatistic", new GetStatisticCommand());
         getCommands.put("editEventForm",new EditEventFormCommand());
-       getCommands.put("myEvents",new GetMyEventsCommand());
+        getCommands.put("myEvents",new GetMyEventsCommand());
+
+        getCommands.put("requestListForm", new RequestListFormCommand());
 
         getCommands.put("allReports", new GetAllReportsCommand());
+        postCommands.put("makeSpeaker",new MakeSpeakerCommand());
         postCommands.put("addEvent", new AddEventCommand());
         postCommands.put("deleteEvent", new DeleteEventCommand());
         postCommands.put("editEvent", new EditEventCommand());
 
         postCommands.put("addNewEvent",new EventFormCommand());
         postCommands.put("userAction", new UserActionCommand());
+
+
+        /**
+         * Speaker commands.
+         **/
+        //speaker commands
+
+
+
+        getCommands.put("getEventById",new GetEventByIdCommand());
 
 
         LOG.debug("Command container was successfully initialized");

@@ -20,9 +20,9 @@ import java.util.*;
 @WebFilter(filterName = "filter2",
         servletNames = "controller",
         initParams = {
-                @WebInitParam(name = "moderator", value = "editEventForm allUsers userAction getStatistic newModer createModer  addEvent addReport deleteEvent editEvent"),
-                @WebInitParam(name = "user",value = "profile history addReport addEvent  joinToEvent"),
-                @WebInitParam(name = "speaker",value = ""),
+                @WebInitParam(name = "moderator", value = "editEventForm allUsers userAction requestListForm makeSpeaker getStatistic newModer createModer  addEvent addReport deleteEvent editEvent"),
+                @WebInitParam(name = "user",value = "profile addReport addEvent joinToEventAsSpeaker registerToEventForm joinToEvent"),
+                @WebInitParam(name = "speaker",value = "allEvents joinToEvent joinToEventAsSpeaker getEventById"),
                 @WebInitParam(name = "out-of-control", value = "myEvents confirmPassword changePassword makeNewPassword login logout registration changeLanguage authorize " +
                         "allEvents allReports sortEvents"),
 
@@ -119,7 +119,7 @@ public class CommandAccessFilter implements Filter {
 
         //roles
         accessMap.put("Moderator",asList(filterConfig.getInitParameter("moderator")));
-        accessMap.put("Speaker",asList(filterConfig.getInitParameter("speaker")));
+        accessMap.put(" Speaker",asList(filterConfig.getInitParameter("speaker")));
         accessMap.put("User", asList(filterConfig.getInitParameter("user")));
         LOG.trace("Access map --> " + accessMap);
 

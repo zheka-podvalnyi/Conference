@@ -1,26 +1,32 @@
-package ua.nure.podvalnyi.web.command;
+package ua.nure.podvalnyi.web.command.speaker;
 
 import org.apache.log4j.Logger;
 import ua.nure.podvalnyi.db.Initializer;
 import ua.nure.podvalnyi.db.entity.Event;
-import ua.nure.podvalnyi.db.entity.User;
 import ua.nure.podvalnyi.db.service.EventService;
+import ua.nure.podvalnyi.web.command.Command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-public class HistoryCommand extends Command {
+import static ua.nure.podvalnyi.web.utils.Const.REGISTER_TO_EVENT;
 
-    private static final Logger LOG = Logger.getLogger(HistoryCommand.class);
+public class GetEventByIdCommand extends Command {
+
+    private static final Logger LOG = Logger.getLogger(GetEventByIdCommand.class);
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        LOG.debug("Command starts");
-        HttpSession session = request.getSession();
+        LOG.debug("Command Starts");
+
         Initializer initializer = Initializer.getInstance();
+
         EventService<Event> eventService = initializer.getEventService();
-        //User user = (User) session.setAttribute();
-    return "null";
+
+        Long eventId = (Long.parseLong(request.getParameter("id")));
+
+        request.setAttribute("eventById", eventService.getEventById(eventId));
+
+        return  REGISTER_TO_EVENT;
     }
 }

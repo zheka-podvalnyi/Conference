@@ -3,7 +3,6 @@ package ua.nure.podvalnyi.db.dao;
 import ua.nure.podvalnyi.db.entity.Event;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -32,8 +31,11 @@ public interface EventDbDao<E extends Event> {
 
     List<E> sortEventByAmountOfUsersDown (Connection connection) throws SQLException;
 
-   Long joinToEvent(Connection connection, Long userId, Long eventId) throws SQLException;
+    List<E> sortEventByReportsUp(Connection connection)throws SQLException;
 
+    List<E> sortEventByReportsDown(Connection connection)throws SQLException;
+
+   Long joinToEvent(Connection connection, Long userId, Long eventId) throws SQLException;
 
 
 }

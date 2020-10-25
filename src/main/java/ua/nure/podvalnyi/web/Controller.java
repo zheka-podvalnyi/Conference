@@ -46,10 +46,6 @@ public class Controller extends HttpServlet {
         String forward = "pages/error.jsp?error=";
         switch (commandName) {
 
-            /*case "main": {
-                forward = "pages/main.jsp?error=";
-                break;
-            }*/
 
             case "login": {
                 forward = "pages/login.jsp?error=";

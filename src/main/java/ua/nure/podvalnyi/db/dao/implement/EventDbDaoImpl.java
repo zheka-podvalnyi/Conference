@@ -1,5 +1,6 @@
 package ua.nure.podvalnyi.db.dao.implement;
 
+import com.sun.org.apache.bcel.internal.generic.Select;
 import jdk.nashorn.internal.objects.annotations.Where;
 import ua.nure.podvalnyi.db.dao.EventDbDao;
 import ua.nure.podvalnyi.db.entity.Event;
@@ -22,10 +23,10 @@ public class EventDbDaoImpl implements EventDbDao {
     private static final String SORT_EVENT_BY_DATE_UP = "SELECT * FROM " + TABLE + " ORDER BY event_date DESC";
     private static final String SORT_EVENT_BY_DATE_DOWN = "SELECT * FROM " + TABLE + " ORDER BY event_date ASC";
     private static final String JOIN_USER_TO_EVENT = "INSERT INTO user_event VALUES(? , ?)";
-    private static final String SORT_EVENT_BY_USERS_UP = "SELECT COUNT(event_amount_user) * FROM "+ TABLE +
-            " ORDER BY event_amount_user DESC";
-    private static final String SORT_EVENT_BY_USERS_DOWN = "SELECT COUNT(event_amount_user) * FROM "+ TABLE +
-            " ORDER BY event_amount_user ASC";
+    private static final String SORT_EVENT_BY_USERS_UP = "SELECT event.event_id,event.event_date,event.event_place,event.event_name From event left join statistic on statistic.event_id=event.event_id group by event.event_id order by count(*) DESC";
+    private static final String SORT_EVENT_BY_USERS_DOWN = "SELECT event.event_id,event.event_date,event.event_place,event.event_name From event left join statistic on statistic.event_id=event.event_id group by event.event_id order by count(*) ASC";
+    private static final String SORT_EVENT_BY_REPORT_UP = "SELECT event.event_id,event.event_date,event.event_place,event.event_name FROM " + TABLE +" event LEFT JOIN statistic ON statistic.event_id=event.event_id WHERE statistic.confirm=1 group by event.event_id  ORDER BY COUNT(*) DESC";
+    private static final String SORT_EVENT_BY_REPORT_DOWN = "SELECT event.event_id,event.event_date,event.event_place,event.event_name FROM " + TABLE +" event LEFT JOIN statistic ON statistic.event_id=event.event_id WHERE statistic.confirm=1 group by event.event_id  ORDER BY COUNT(*) ASC";
 
 
 
@@ -199,6 +200,37 @@ public class EventDbDaoImpl implements EventDbDao {
             }
         }
         return events;
+    }
+
+    @Override
+    public List sortEventByReportsUp(Connection connection) throws SQLException {
+        List<Event> events = new ArrayList<>();
+        String query = SORT_EVENT_BY_REPORT_UP;
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query);
+             ResultSet resultSet = preparedStatement.executeQuery()) {
+            while (resultSet.next()) {
+                Event event = getEvent(resultSet);
+                event.setId(resultSet.getLong("event_id"));
+                events.add(event);
+            }
+        }
+        return events;
+    }
+
+    @Override
+    public List sortEventByReportsDown(Connection connection) throws SQLException {
+        List<Event> events = new ArrayList<>();
+        String query = SORT_EVENT_BY_REPORT_DOWN;
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query);
+             ResultSet resultSet = preparedStatement.executeQuery()) {
+            while (resultSet.next()) {
+                Event event = getEvent(resultSet);
+                event.setId(resultSet.getLong("event_id"));
+                events.add(event);
+            }
+        }
+        return events;
+
     }
 
     @Override

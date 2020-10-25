@@ -33,8 +33,7 @@ public class EditEventCommand extends Command {
         Date date = Date.valueOf(request.getParameter("date"));
         String place = request.getParameter("place");
         String name = request.getParameter("name");
-    /*    HttpSession session = request.getSession();
-        User user = (User) session.getAttribute("user");*/
+
 
 
         Long id = Long.parseLong(request.getParameter("id"));

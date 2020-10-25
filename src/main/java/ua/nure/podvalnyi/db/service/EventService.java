@@ -33,5 +33,9 @@ public interface EventService<E extends Event> {
 
     Long joinToEvent(Long userId, Long eventId) throws DBException;
 
+    List<E> sortEventByReportsUp()throws DBException;
+
+    List<E> sortEventByReportsDown()throws DBException;
+
 
 }

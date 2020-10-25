@@ -1,7 +1,7 @@
 package ua.nure.podvalnyi.db.service.implement;
 
 import ua.nure.podvalnyi.db.dao.StatisticDbDao;
-import ua.nure.podvalnyi.db.dao.UserDbDao;
+import ua.nure.podvalnyi.db.entity.RequestDto;
 import ua.nure.podvalnyi.db.entity.Statistic;
 import ua.nure.podvalnyi.db.service.StatisticService;
 import ua.nure.podvalnyi.exception.DBException;
@@ -34,6 +34,11 @@ public class StatisticServiceImpl implements StatisticService {
     }
 
     @Override
+    public Statistic getStatistic(Long userId, Long eventId) throws DBException {
+        return transactionManager.useWithOutTransaction(connection -> statisticDbDao.getStatistic(connection, userId,eventId));
+    }
+
+    @Override
     public Long addStatistic(Statistic statistic) throws DBException {
         return Optional.ofNullable(transactionManager.useWithOutTransaction(connection ->
                 statisticDbDao.addStatistic(connection, statistic))).orElse(-1L);
@@ -43,5 +48,18 @@ public class StatisticServiceImpl implements StatisticService {
     public Long countStatistic(Long eventId) throws DBException {
         return Optional.ofNullable(transactionManager.useWithOutTransaction(connection ->
                 statisticDbDao.countStatistic(connection, eventId))).orElse(-1L);
+    }
+
+    @Override
+    public boolean changeStatistic(Statistic statistic) throws DBException {
+
+        return Optional.ofNullable(transactionManager.useWithOutTransaction(connection -> statisticDbDao.changeStatistic(connection, statistic)))
+                .isPresent();
+    }
+
+    @Override
+    public List<RequestDto> getRequestDto() throws DBException {
+        return Optional.ofNullable(transactionManager.useWithOutTransaction(connection -> statisticDbDao.getRequestDto(connection)))
+                .orElse(Collections.emptyList());
     }
 }

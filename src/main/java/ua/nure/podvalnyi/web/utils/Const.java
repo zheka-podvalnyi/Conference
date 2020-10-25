@@ -19,6 +19,10 @@ public final class Const {
     public static final String CHANGE_PASSWORD_AUTH = "controller1?command=profile&info=mail";
     public static final String CHANGE_PASSWORD_NOT_AUTH = "pages/login.jsp?info=mail";
 
+    public static final String REGISTER_TO_EVENT = "registerToEvent.jsp";
+
+    public static final String REQUEST_LIST ="requestList.jsp";
+
 
     public static final String MODER_PAGE = "moder_page.jsp";
     public static final String MODER_REGISTRATION = "moder_registration.jsp";
@@ -32,6 +36,8 @@ public final class Const {
 
     public static final String ALL_REPORTS = "controller1?command=allReports";
     public static final String ALL_USERS = "controller1?command=allUsers";
+
+    public static final String CONFIRM_REQUEST = "controller1?command=requestListForm";
 
     public static final String EVENTS ="events.jsp";
 

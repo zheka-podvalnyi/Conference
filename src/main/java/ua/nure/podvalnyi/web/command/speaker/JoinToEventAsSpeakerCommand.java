@@ -1,4 +1,4 @@
-package ua.nure.podvalnyi.web.command.user;
+package ua.nure.podvalnyi.web.command.speaker;
 
 import org.apache.log4j.Logger;
 import ua.nure.podvalnyi.db.Initializer;
@@ -16,32 +16,37 @@ import javax.servlet.http.HttpSession;
 import static ua.nure.podvalnyi.web.utils.Const.EVENTS;
 
 
+public class JoinToEventAsSpeakerCommand extends Command {
 
-public class JoinUserToEventCommand extends Command {
-
-Logger LOG = Logger.getLogger(JoinUserToEventCommand.class);
+    private static final Logger LOG = Logger.getLogger(JoinToEventAsSpeakerCommand.class);
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
         LOG.debug("Command starts");
 
         Initializer initializer = Initializer.getInstance();
+
+        EventService<Event> eventService = initializer.getEventService();
+
         StatisticService<Statistic> statisticService = initializer.getStatisticService();
-
-
 
         HttpSession session = request.getSession();
 
         User user = (User) session.getAttribute("user");
 
-       Long eventId = (Long.parseLong(request.getParameter("id")));
+        Long eventId = (Long.parseLong(request.getParameter("id")));
 
-        Statistic statistic = new Statistic(user.getId(),eventId,false);
+        String topic = request.getParameter("topic");
 
 
-        statisticService.addStatistic(statistic);
+        Statistic statistic = new Statistic(user.getId(),eventId,false,true,topic,false);
 
-    return "controller1?command=allEvents";
+        statisticService.changeStatistic(statistic);
+
+        LOG.debug("Command finished");
+
+
+return EVENTS;
+
     }
 }

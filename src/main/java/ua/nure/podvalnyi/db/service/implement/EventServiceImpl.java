@@ -89,4 +89,16 @@ public class EventServiceImpl implements EventService {
         return Optional.ofNullable(transactionManager.useWithOutTransaction(
                 connection -> eventDbDao.joinToEvent(connection, userId,eventId))).orElse(-1L);
     }
+
+    @Override
+    public List sortEventByReportsUp() throws DBException {
+        return Optional.ofNullable(transactionManager.useWithOutTransaction(connection -> eventDbDao.sortEventByReportsUp(connection)))
+                .orElse(Collections.emptyList());
+    }
+
+    @Override
+    public List sortEventByReportsDown() throws DBException {
+        return Optional.ofNullable(transactionManager.useWithOutTransaction(connection -> eventDbDao.sortEventByReportsDown(connection)))
+                .orElse(Collections.emptyList());
+    }
 }
